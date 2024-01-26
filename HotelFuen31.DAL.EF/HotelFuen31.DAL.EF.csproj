@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D0FDF75-236F-4120-A0A2-52B33E3AF0FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HotelFuen31.DAL.EF</RootNamespace>
+    <AssemblyName>HotelFuen31.DAL.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EFModels\AppDbContext.cs" />
+    <Compile Include="EFModels\Authorization.cs" />
+    <Compile Include="EFModels\BusRoute.cs" />
+    <Compile Include="EFModels\BusTracker.cs" />
+    <Compile Include="EFModels\CarCartItem.cs" />
+    <Compile Include="EFModels\CarMaintenance.cs" />
+    <Compile Include="EFModels\CarManagement.cs" />
+    <Compile Include="EFModels\CarOrder.cs" />
+    <Compile Include="EFModels\CarOrderItem.cs" />
+    <Compile Include="EFModels\CarPrice.cs" />
+    <Compile Include="EFModels\CarResponsible.cs" />
+    <Compile Include="EFModels\Employee.cs" />
+    <Compile Include="EFModels\EmployeeRole.cs" />
+    <Compile Include="EFModels\HallItem.cs" />
+    <Compile Include="EFModels\HallLog.cs" />
+    <Compile Include="EFModels\HallMenu.cs" />
+    <Compile Include="EFModels\HallMenuOrder.cs" />
+    <Compile Include="EFModels\HallMenuSchedule.cs" />
+    <Compile Include="EFModels\Member.cs" />
+    <Compile Include="EFModels\MemberLevel.cs" />
+    <Compile Include="EFModels\RestaurantCustomer.cs" />
+    <Compile Include="EFModels\RestaurantPeriod.cs" />
+    <Compile Include="EFModels\RestaurantReservation.cs" />
+    <Compile Include="EFModels\RestaurantSeat.cs" />
+    <Compile Include="EFModels\RestaurantStatus.cs" />
+    <Compile Include="EFModels\Role.cs" />
+    <Compile Include="EFModels\RoleAuthorization.cs" />
+    <Compile Include="EFModels\Room.cs" />
+    <Compile Include="EFModels\RoomBooking.cs" />
+    <Compile Include="EFModels\RoomStatusSetting.cs" />
+    <Compile Include="EFModels\RoomType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
